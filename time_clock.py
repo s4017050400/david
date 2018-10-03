@@ -9,3 +9,16 @@ for i in range(1,11):
   standard=date.isoformat().translate({ord(c):None for c in '-'})#date.isoformat() is 2018-10-03
   print(standard)
   
+'''
+result:
+20181004
+20181005
+20181006
+20181007
+20181008
+20181009
+20181010
+20181011
+20181012
+20181013
+'''
