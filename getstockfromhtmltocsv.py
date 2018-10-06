@@ -17,7 +17,7 @@ r=requests.post(url,{
 
 
 dfs = pd.read_html(r.text)
-df=pd.concat(dfs)
+df=pd.concat(dfs)#concat is a function which can merge two (or more) dataframe (from dfs) in same column.
 df.to_csv('sii.csv',encoding='utf_8_sig')
 
 
