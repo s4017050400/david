@@ -17,11 +17,8 @@ r=requests.post(url,{
 
 
 dfs = pd.read_html(r.text)
-
-
-
-for df in dfs:
-    df.to_csv('text.csv',encoding='utf_8_sig')
+df=pd.concat(dfs)
+df.to_csv('sii.csv',encoding='utf_8_sig')
 
 
 '''
