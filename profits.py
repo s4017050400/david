@@ -15,7 +15,8 @@ r = requests.post(url, {
 r.encoding='big5'
 
 dfs=pd.read_html(StringIO(r.text))
-df=pd.concat(dfs).drop_duplicates(subset=0).drop([0,1]).reset_index(drop=True)
+df=pd.concat(dfs).drop_duplicates(subset=0).drop([0,1]).reset_index(drop=True) //duplicates mean to delete the row which has same data.
+// drop means to delete the row of index=0,1. 
 list1=['公司代號	名稱', '資料來源', '期別', '董事會決議', 
 '日期',	'期初未分配',
 '本期淨利',
@@ -29,6 +30,6 @@ list1=['公司代號	名稱', '資料來源', '期別', '董事會決議',
 '股東配股']
 list2=[p for p in range(0,10)]
 df.columns=list1+list2
-df[['代號','公司']]=df['公司代號\t名稱'].str.split(' - ', expand=True)
+df[['代號','公司']]=df['公司代號\t名稱'].str.split(' - ', expand=True)//split 1 column into 2 columns called ['代號','公司'] by ' - '
 
 df.to_csv('profit104.csv',encoding='utf_8_sig')
