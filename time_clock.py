@@ -22,3 +22,16 @@ result:
 20181012
 20181013
 '''
+__________________________________________________________________________________________--
+from datetime import date
+from datetime import timedelta
+
+def datebyyear(year):
+    today=date.today() #which is like datetime.date(2018,10,3)
+    one_day=timedelta(days=1) #one day which can be plused
+
+    for i in range(0,365*year):
+        date1=today+i*one_day
+        standard=date1.isoformat().translate({ord(c):None for c in '-'})#date.isoformat() is 2018-10-03
+        print(standard)
+#function
