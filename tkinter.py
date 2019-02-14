@@ -27,3 +27,7 @@ class Path():
 b=Path(file_path)
 
 print(b.path2)
+
+
+#__________________________________________
+https://openhome.cc/Gossip/CodeData/PythonTutorial/FunctionModuleClassPackagePy3.html
