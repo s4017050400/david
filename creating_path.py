@@ -23,6 +23,8 @@ with open(filename, "w") as f:
 
 #______________________________________________________
 
+
+from os import listdir
 mypath = r'C:\Users\CKLu0\Desktop\UAA077 DD1C corner EV\eda_file_search_2019-02-12.14.24.45\eda_file_archive2\eda_export_data\ftwb\壓縮檔'
 >>> files = listdir(mypath)
 >>> for f in files:
