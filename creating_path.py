@@ -29,3 +29,18 @@ mypath = r'C:\Users\CKLu0\Desktop\UAA077 DD1C corner EV\eda_file_search_2019-02-
 >>> files = listdir(mypath)
 >>> for f in files:
 ...     print(f)
+
+
+#______________________________________________________
+
+>>> mypath = r'C:\Users\CKLu0\Desktop\壓縮檔' #輸入檔案位置
+>>> files = listdir(mypath) #把目錄下的檔案列出
+>>> for file in files: #列出
+...     d1=dict1[file[17:20]]   #dict1={'FT1':'FT1_-40','FT2':'FT2_25','FT3':'FT3_90','FT':'FT4_125'}
+...     d2=dict2[file[11:13]]   #dict2={'ZW':'HH','ZU':'LL','ZR':'TT','ZT':'HL','ZS':'LH'}
+...     filename = "foo/bar/{0}/{1}/This_is_{0}+{1}_dir.txt".format(d1,d2)
+...     os.makedirs(os.path.dirname(filename), exist_ok=True)   #創造路徑
+...     with open(filename, "w") as f1:
+...             f=open(mypath+'/'+file)
+...             f1.write(f.read())
+...             f1.close
