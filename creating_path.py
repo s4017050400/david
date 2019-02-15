@@ -33,6 +33,7 @@ mypath = r'C:\Users\CKLu0\Desktop\UAA077 DD1C corner EV\eda_file_search_2019-02-
 
 #______________________________________________________
 
+from os import listdir
 >>> mypath = r'C:\Users\CKLu0\Desktop\壓縮檔' #輸入檔案位置
 >>> files = listdir(mypath) #把目錄下的檔案列出
 >>> for file in files: #列出
