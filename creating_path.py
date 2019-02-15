@@ -44,11 +44,11 @@ root.withdraw()
 
 
 def path():
-    file = filedialog.askopenfilename()
+    file = filedialog.askopenfilename()     #取得檔案路徑
     return str(file)
 
 def direct():
-    direct = filedialog.askdirectory()
+    direct = filedialog.askdirectory()      #取得目錄路徑
     return str(direct)
 
 #______________________________________________________
